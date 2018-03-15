@@ -1,0 +1,39 @@
+{
+  "physical": {
+    "10.0.0.0/24": {
+      "blacklist": true
+    },
+    "10.10.10.0/24": {
+      "trustedPathId": 101010024
+    }
+  },
+  "virtual": {
+    "feedbeef12": {
+      "role": "UPSTREAM",
+      "try": [
+        "10.10.20.1/9993"
+      ],
+      "blacklist": [
+        "192.168.0.0/24"
+      ]
+    }
+  },
+  "settings": {
+    "primaryPort": 65534,
+    "portMappingEnabled": true,
+    "softwareUpdate": "apply",
+    "softwareUpdateChannel": "release",
+    "softwareUpdateDist": false,
+    "interfacePrefixBlacklist": [
+      "en",
+      "vt0"
+    ],
+    "allowManagementFrom": [
+      "10.11.12.24/24"
+    ],
+    "bind": [
+      "10.32.11.13"
+    ],
+    "allowTcpFallbackRelay": true
+  }
+}

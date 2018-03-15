@@ -1,0 +1,19 @@
+{
+  "name": "zerotier-schemas",
+  "version": "0.1.5",
+  "descriptions": "joi schemas for zerotier things",
+  "scripts": {
+    "test": "standard --fix && tape test/*.test.js"
+  },
+  "bin": "bin.js",
+  "devDependencies": {
+    "standard": "^11.0.0",
+    "tape": "^4.9.0"
+  },
+  "dependencies": {
+    "concat-stream": "^1.6.2",
+    "joi": "^13.7.0",
+    "jsonlint": "^1.6.3",
+    "minimist": "^1.2.0"
+  }
+}
