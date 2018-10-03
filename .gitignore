@@ -18,3 +18,4 @@ map_tile_cache
 /build
 dbip-latest_*.bin.gz
 zerotier-central.tar.gz
+/package-lock.json
