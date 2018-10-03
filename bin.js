@@ -5,8 +5,7 @@ var argv = require('minimist')(process.argv.slice(2))
 var concat = require('concat-stream')
 var jsonlint = require('jsonlint')
 
-var { network, member } = require('./').controller
-var localconf = require('./local-conf')
+var { network, member, localconf } = require('./')
 
 var json
 
