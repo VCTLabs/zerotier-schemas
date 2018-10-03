@@ -1,8 +1,11 @@
-var { member, network } = require('./controller')
 var localconf = require('./local-conf')
+var member = require('./member')
+var membership = require('./membership')
+var network = require('./network')
 
 module.exports = {
-  member: member,
-  network: network,
-  localconf: localconf
+  localconf,
+  member,
+  membership,
+  network
 }

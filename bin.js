@@ -5,7 +5,7 @@ var argv = require('minimist')(process.argv.slice(2))
 var concat = require('concat-stream')
 var jsonlint = require('jsonlint')
 
-var { network, member, localconf } = require('./')
+var { network, member, localconf, membership } = require('./')
 
 var json
 
@@ -19,9 +19,10 @@ if (!fn) {
 var readStream = file ? fs.createReadStream(file, 'utf8') : process.stdin
 
 var schema = {
-  network: network,
-  member: member,
-  localconf: localconf
+  localconf,
+  member ,
+  membership,
+  network
 }[fn]
 
 if (!schema) {
@@ -53,7 +54,7 @@ function gotStdin (data) {
 
 function usage () {
   return `usage:
-zerotier-schemas [network|member|localconf] [file]
+zerotier-schemas [network|member|localconf|membership] [file]
 cat network.json | zerotier-schemas network
 zerotier-schemas member member2.json
 `

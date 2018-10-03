@@ -10,7 +10,7 @@
 
 # Node API
 ```javascript
-var { network, member, localconf } = require('zerotier-schemas')
+var { network, member, localconf, membership } = require('zerotier-schemas')
 var { error, value } = network.validate('{}')
 ```
 
