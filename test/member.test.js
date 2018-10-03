@@ -1,7 +1,7 @@
 var test = require('tape')
 
 test('member - valid', function (t) {
-  var schema = require('../member.js')
+  var schema = require('../member')
 
   var input = {
     activeBridge: false,
