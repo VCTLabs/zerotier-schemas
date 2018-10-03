@@ -24,7 +24,7 @@ module.exports = Joi.object().keys({
   name: Joi.string()
     .optional()
     .max(256)
-    .valid(''),
+    .allow(''),
   private: Joi.boolean().optional(),
   remoteTraceLevel: Joi.number(),
   remoteTraceTarget: nodeId.allow(null),

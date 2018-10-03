@@ -59,6 +59,31 @@ test('network - valid', function (t) {
   t.end()
 })
 
+test('network - alternatives', function (t) {
+  var schema = require('../network')
+
+  var input = {
+    name: 'a network',
+    routes: [
+      {
+        target: '192.168.192.0/24',
+        via: '192.168.192.3'
+      }
+    ],
+    remoteTraceTarget: '1234123400',
+    v4AssignMode: 'zt'
+  }
+
+  var { error, value } = schema.validate(input, {
+    allowUnknown: true,
+    stripUnknown: true
+  })
+
+  t.ok(value)
+  t.notOk(error)
+
+  t.end()
+})
 test('network - something wrong', function (t) {
   var schema = require('../network')
 
