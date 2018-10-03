@@ -1,6 +1,6 @@
 {
   "name": "zerotier-schemas",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": "laduke/zerotier-schemas",
   "descriptions": "joi schemas for zerotier things",
   "scripts": {
