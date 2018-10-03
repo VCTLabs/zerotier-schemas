@@ -31,7 +31,9 @@ module.exports = Joi.object().keys({
     allowManagementFrom: Joi.array()
       .items(Joi.string().ip({ cidr: 'required' }))
       .allow(null),
-    bind: Joi.array().items(Joi.string().ip()).allow(null),
+    bind: Joi.array()
+      .items(Joi.string().ip())
+      .allow(null),
     allowTcpFallbackRelay: Joi.boolean()
   })
 })

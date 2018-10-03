@@ -48,7 +48,10 @@ test('network - valid', function (t) {
     }
   }
 
-  var { error, value } = schema.validate(input)
+  var { error, value } = schema.validate(input, {
+    allowUnknown: true,
+    stripUnknown: true
+  })
 
   t.ok(value)
   t.notOk(error)
@@ -63,7 +66,10 @@ test('network - something wrong', function (t) {
     id: 'asdfz'
   }
 
-  var { error } = schema.validate(input)
+  var { error } = schema.validate(input, {
+    allowUnknown: true,
+    stripUnknown: true
+  })
 
   t.ok(error)
 

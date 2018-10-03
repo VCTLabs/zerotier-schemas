@@ -11,7 +11,7 @@ test('member - valid', function (t) {
     creationTime: 1537309146363,
     id: '7e2d4b9975',
     identity:
-    '7e2d4b9975:0:fc4988d42759035d7cafe89374ff58812d48b96afe89d162dd08ef2dac18297a0c52d6d9647b3737c8ffdb3daec4430e6c25cfbb334255951c4d977967930f94',
+      '7e2d4b9975:0:fc4988d42759035d7cafe89374ff58812d48b96afe89d162dd08ef2dac18297a0c52d6d9647b3737c8ffdb3daec4430e6c25cfbb334255951c4d977967930f94',
     ipAssignments: [],
     lastAuthorizedCredential: null,
     lastAuthorizedCredentialType: 'api',
@@ -30,7 +30,10 @@ test('member - valid', function (t) {
     vRev: -1
   }
 
-  var { value, error } = schema.validate(input)
+  var { value, error } = schema.validate(input, {
+    allowUnknown: true,
+    stripUnknown: true
+  })
   t.ok(value)
   t.notOk(error)
 

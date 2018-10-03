@@ -20,7 +20,7 @@ var readStream = file ? fs.createReadStream(file, 'utf8') : process.stdin
 
 var schema = {
   localconf,
-  member ,
+  member,
   membership,
   network
 }[fn]
@@ -31,15 +31,15 @@ if (!schema) {
   process.exit(1)
 }
 
-readStream.pipe(concat(gotStdin))
-  .on('finish', validate)
+readStream.pipe(concat(gotStdin)).on('finish', validate)
 
 function validate () {
-  var { error } = schema.validate(json)
+  var { error } = schema.validate(json, {
+    allowUnknown: true,
+    stripUnknown: true
+  })
   if (error) {
     console.error(error.details)
-  } else {
-    console.log('valid')
   }
 }
 

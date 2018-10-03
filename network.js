@@ -9,7 +9,6 @@ var networkId = Joi.string()
   .length(16)
 
 module.exports = Joi.object().keys({
-  // writeable
   authTokens: Joi.array(),
   capabilities: Joi.array(),
   enableBroadcast: Joi.boolean(),
@@ -47,11 +46,6 @@ module.exports = Joi.object().keys({
     '6plane': Joi.boolean(),
     rfc4193: Joi.boolean(),
     zt: Joi.boolean()
-  }),
 
-  // readonly
-  creationTime: Joi.number().strip(),
-  nwid: Joi.any().strip(),
-  objtype: Joi.any().strip(),
-  revision: Joi.number().strip()
+  })
 })

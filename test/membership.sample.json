@@ -1,0 +1,29 @@
+{
+  "allowDefault": false,
+  "allowGlobal": false,
+  "allowManaged": true,
+  "assignedAddresses": [
+    "192.168.192.13/24"
+  ],
+  "bridge": false,
+  "broadcastEnabled": true,
+  "dhcp": false,
+  "id": "cdf3a4bc0f38e863",
+  "mac": "62:71:0d:97:a7:ba",
+  "mtu": 2800,
+  "name": "network example",
+  "netconfRevision": 1,
+  "nwid": "cdf3a4bc0f38e863",
+  "portDeviceName": "zt0",
+  "portError": 0,
+  "routes": [
+    {
+      "flags": 0,
+      "metric": 0,
+      "target": "192.168.192.0/24",
+      "via": null
+    }
+  ],
+  "status": "OK",
+  "type": "PRIVATE"
+}
