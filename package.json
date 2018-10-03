@@ -1,6 +1,7 @@
 {
   "name": "zerotier-schemas",
-  "version": "0.1.5",
+  "version": "0.1.6",
+  "repository": "laduke/zerotier-schemas",
   "descriptions": "joi schemas for zerotier things",
   "scripts": {
     "test": "standard --fix && tape test/*.test.js"
